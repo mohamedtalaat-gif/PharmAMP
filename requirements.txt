@@ -1,0 +1,11 @@
+# Pinned to what the scoring tool (app.py) is actually tested against.
+# Deployment target: Hugging Face Spaces (Streamlit SDK) or Streamlit Community Cloud.
+# Does not include pharmamp[benchmark]'s extras — the OmegAMP generation path
+# isn't part of this deployment yet; see README.md's Roadmap.
+seqme==0.5.1
+peptides==0.5.0
+numpy==2.5.3
+pandas==3.0.5
+biopython==1.88
+streamlit==1.63.0
+h5py==3.16.0

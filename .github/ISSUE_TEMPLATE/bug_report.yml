@@ -1,0 +1,38 @@
+name: Bug report
+description: Something doesn't work the way the docs/code say it should
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: >
+        For pharmamp/metrics/ bugs, a concrete input sequence and the score
+        you got is usually enough. For benchmark/generation bugs, the exact
+        command you ran.
+      render: shell
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: pharmamp version / commit
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options:
+        - macOS
+        - Linux
+        - Windows
+    validations:
+      required: false

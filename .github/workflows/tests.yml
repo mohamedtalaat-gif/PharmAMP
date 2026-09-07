@@ -1,0 +1,33 @@
+name: Tests
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pharmamp (dev + validate extras — no torch/lightning needed)
+        run: pip install -e ".[dev,validate]"
+
+      # Shallow-clones the small reference CSV that load_reference_amps()/
+      # build_metrics() read — not the multi-GB checkpoint/embeddings, which
+      # stay local-only. Unlocks tests/test_run_benchmark_light.py.
+      - name: Clone OmegAMP checkout (no model weights)
+        run: git clone --depth 1 https://github.com/szczurek-lab/OmegAMP.git third_party/OmegAMP
+
+      - name: Run tests
+        run: pytest -v

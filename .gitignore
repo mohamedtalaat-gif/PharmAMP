@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# local symlinks into .venv's bundled Streamlit skill doc — broken on a
+# fresh clone since .venv isn't committed; not project content
+.agents/
+.claude/
+
+# pretrained weights and large data — documented in README, not committed
+models/*.ckpt
+data/generative-model-data/*.h5
+data/generative-model-data/*.part
+
+.DS_Store
+
+# full external clones with their own git history — never narrow this to a
+# subdirectory, that would either vacuum in an unrelated repo's history or
+# create a broken embedded-repo/gitlink entry
+third_party/
+
+# CC-BY-ND licensed data, not ours to redistribute — see
+# pharmamp/benchmark/validate_against_wetlab.py's module docstring
+data/wetlab-supplement/
