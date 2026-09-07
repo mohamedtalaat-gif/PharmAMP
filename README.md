@@ -24,6 +24,17 @@ solubility scoring, built as `seqme`-compatible metrics, plus a benchmark
 harness that runs AMP generators through both the existing potency/diversity
 metrics and these new developability ones side by side.
 
+Worth stating precisely: [Paulina Szymczak](https://github.com/szymczakpau)
+noted that OmegAMP's own pipeline already enforces a set of rules for
+synthesizability and solubility, and that her team had no issues on that
+front experimentally — so "nothing screens for developability" overstates
+the gap for OmegAMP specifically. What she also said, in the same comment,
+is that general-purpose viability screening for peptide and protein design
+"has not been solved yet by a general predictor" — which is the actual
+scope PharmAMP is aimed at: a reusable, `seqme`-compatible screen usable
+across generators, not a claim that this exact gap is unaddressed inside
+OmegAMP's own pipeline specifically.
+
 ![Pipeline diagram: generative AMP design filters candidates on predicted potency alone and only discovers aggregation or solubility failures after costly wet-lab synthesis; PharmAMP inserts a developability screen before that step.](docs/figures/potency_vs_developability.svg)
 
 ## What's here
@@ -136,6 +147,17 @@ membrane-disruptive/cytotoxic character (where it does correlate, with CC50)
 rather than β-sheet-driven amyloid aggregation specifically (where it
 doesn't, and runs backwards) — worth a rename or a rework of the metric
 once addressed.
+
+[Paulina Szymczak](https://github.com/szymczakpau) (OmegAMP co-first author)
+confirmed this reading directly, in a public comment on the announcement of
+this project: for a dataset like this one, cytotoxicity and hemolysis are
+governed more by mode of action at the membrane than by behavior in aqueous
+solution, and she wouldn't expect a linear relationship between them and
+aggregation propensity/solubility as conventionally defined. That's a
+better-grounded explanation than the one above, from someone who generated
+the underlying data — exactly the axis the metric's hydrophobic-patch proxy
+tracks (membrane character), and exactly why it misses β-sheet-driven
+aggregation specifically.
 
 ## License
 
