@@ -1,0 +1,135 @@
+<svg viewBox="0 0 1160 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline diagram comparing generative antimicrobial peptide design with and without a developability screen. In the current pipeline, candidates pass from a generator through an activity filter straight to costly wet-lab synthesis, where aggregation and solubility failures are only discovered afterward. With PharmAMP's developability screen inserted before synthesis, those failures are caught earlier and cheaper, and fewer candidates reach the expensive step.">
+  <title>A potent sequence isn't a drug product — PharmAMP figure 1</title>
+  <style>
+    :root {
+      --ground: #F2F4F6; --surface: #FFFFFF; --ink: #212B3D; --muted: #5B6B85;
+      --line: #C7CFDA; --accent: #3D6B66; --accent-soft: #E4EDEC;
+      --risk: #B8562E; --risk-soft: #F6E6DE; --pass: #5C8A5C; --pass-soft: #E7EFE3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ground: #14181D; --surface: #1B2129; --ink: #E7EAF0; --muted: #93A0B8;
+        --line: #3A4454; --accent: #6FA89F; --accent-soft: #23342F;
+        --risk: #E08A5C; --risk-soft: #3A2A22; --pass: #8AC28A; --pass-soft: #24301F;
+      }
+    }
+    text { font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; }
+    .mono { font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace; }
+  </style>
+
+  <rect x="1" y="1" width="1158" height="658" rx="16" fill="var(--surface)" stroke="var(--line)" stroke-width="1.4"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- ============ ROW 1 : today ============ -->
+  <text class="mono" x="40" y="34" font-size="12.5" letter-spacing="0.06em" fill="var(--muted)">GENERATIVE AMP DESIGN, TODAY</text>
+
+  <!-- col 1: generator -->
+  <rect x="40" y="60" width="220" height="100" rx="10" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+  <text x="150" y="100" text-anchor="middle" font-size="14" font-weight="500" fill="var(--ink)">Generator</text>
+  <text x="150" y="120" text-anchor="middle" font-size="11.5" fill="var(--muted)">OmegAMP · HydrAMP</text>
+  <g fill="var(--muted)">
+    <circle cx="95" cy="140" r="3.2"/><circle cx="112" cy="140" r="3.2"/><circle cx="129" cy="140" r="3.2"/>
+    <circle cx="146" cy="140" r="3.2"/><circle cx="163" cy="140" r="3.2"/><circle cx="180" cy="140" r="3.2"/>
+    <circle cx="197" cy="140" r="3.2"/><circle cx="214" cy="140" r="3.2"/>
+  </g>
+
+  <line x1="260" y1="110" x2="296" y2="110" stroke="var(--ink)" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- col 2: activity filter -->
+  <rect x="300" y="60" width="220" height="100" rx="10" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+  <text x="410" y="100" text-anchor="middle" font-size="14" font-weight="500" fill="var(--ink)">Activity filter</text>
+  <text x="410" y="120" text-anchor="middle" font-size="11.5" fill="var(--muted)">predicted potency</text>
+  <g fill="var(--pass)">
+    <circle cx="365" cy="140" r="3.2"/><circle cx="382" cy="140" r="3.2"/><circle cx="399" cy="140" r="3.2"/>
+    <circle cx="416" cy="140" r="3.2"/><circle cx="433" cy="140" r="3.2"/><circle cx="450" cy="140" r="3.2"/>
+  </g>
+
+  <line x1="520" y1="110" x2="556" y2="110" stroke="var(--ink)" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- col 3: the gap (ghost box) -->
+  <rect x="560" y="60" width="220" height="100" rx="10" fill="none" stroke="var(--line)" stroke-width="1.4" stroke-dasharray="5 5"/>
+  <text x="670" y="104" text-anchor="middle" font-size="13" fill="var(--muted)" font-style="italic">not checked</text>
+  <text x="670" y="123" text-anchor="middle" font-size="11" fill="var(--muted)">aggregation? solubility?</text>
+
+  <line x1="780" y1="110" x2="816" y2="110" stroke="var(--ink)" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- col 4: synthesis -->
+  <rect x="820" y="60" width="300" height="100" rx="10" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+  <text x="970" y="94" text-anchor="middle" font-size="14" font-weight="500" fill="var(--ink)">Synthesis &amp; wet-lab testing</text>
+  <text x="970" y="113" text-anchor="middle" font-size="11" fill="var(--muted)">MIC panel · CC50 · HC50 · CD · murine models</text>
+  <g>
+    <circle cx="890" cy="138" r="3.4" fill="var(--pass)"/><circle cx="908" cy="138" r="3.4" fill="var(--pass)"/>
+    <circle cx="926" cy="138" r="3.4" fill="var(--risk)"/><circle cx="944" cy="138" r="3.4" fill="var(--pass)"/>
+    <circle cx="962" cy="138" r="3.4" fill="var(--risk)"/><circle cx="980" cy="138" r="3.4" fill="var(--pass)"/>
+  </g>
+
+  <line x1="970" y1="160" x2="970" y2="184" stroke="var(--risk)" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="790" y="186" width="360" height="44" rx="8" fill="var(--risk-soft)"/>
+  <text x="970" y="204" text-anchor="middle" font-size="11.5" fill="var(--risk)" font-weight="500">aggregation / poor solubility</text>
+  <text x="970" y="220" text-anchor="middle" font-size="10.5" fill="var(--risk)">found here — after the cost is spent</text>
+
+  <!-- divider -->
+  <line x1="40" y1="290" x2="1120" y2="290" stroke="var(--line)" stroke-width="1"/>
+
+  <!-- ============ ROW 2 : with PharmAMP ============ -->
+  <text class="mono" x="40" y="330" font-size="12.5" letter-spacing="0.06em" fill="var(--accent)">WITH A DEVELOPABILITY SCREEN</text>
+
+  <rect x="40" y="356" width="220" height="100" rx="10" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+  <text x="150" y="396" text-anchor="middle" font-size="14" font-weight="500" fill="var(--ink)">Generator</text>
+  <text x="150" y="416" text-anchor="middle" font-size="11.5" fill="var(--muted)">OmegAMP · HydrAMP</text>
+  <g fill="var(--muted)">
+    <circle cx="95" cy="436" r="3.2"/><circle cx="112" cy="436" r="3.2"/><circle cx="129" cy="436" r="3.2"/>
+    <circle cx="146" cy="436" r="3.2"/><circle cx="163" cy="436" r="3.2"/><circle cx="180" cy="436" r="3.2"/>
+    <circle cx="197" cy="436" r="3.2"/><circle cx="214" cy="436" r="3.2"/>
+  </g>
+
+  <line x1="260" y1="406" x2="296" y2="406" stroke="var(--ink)" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <rect x="300" y="356" width="220" height="100" rx="10" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+  <text x="410" y="396" text-anchor="middle" font-size="14" font-weight="500" fill="var(--ink)">Activity filter</text>
+  <text x="410" y="416" text-anchor="middle" font-size="11.5" fill="var(--muted)">predicted potency</text>
+  <g fill="var(--pass)">
+    <circle cx="365" cy="436" r="3.2"/><circle cx="382" cy="436" r="3.2"/><circle cx="399" cy="436" r="3.2"/>
+    <circle cx="416" cy="436" r="3.2"/><circle cx="433" cy="436" r="3.2"/><circle cx="450" cy="436" r="3.2"/>
+  </g>
+
+  <line x1="520" y1="406" x2="556" y2="406" stroke="var(--ink)" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- col 3: developability screen, filled in -->
+  <rect x="560" y="356" width="220" height="100" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"/>
+  <text x="670" y="393" text-anchor="middle" font-size="14" font-weight="600" fill="var(--accent)">Developability screen</text>
+  <text x="670" y="412" text-anchor="middle" font-size="11" fill="var(--accent)">aggregation + solubility score</text>
+  <g fill="var(--pass)">
+    <circle cx="605" cy="436" r="3.2"/><circle cx="622" cy="436" r="3.2"/>
+    <circle cx="639" cy="436" r="3.2" fill="var(--risk)"/>
+    <circle cx="656" cy="436" r="3.2"/><circle cx="673" cy="436" r="3.2" fill="var(--risk)"/><circle cx="690" cy="436" r="3.2"/>
+  </g>
+
+  <line x1="780" y1="406" x2="816" y2="406" stroke="var(--ink)" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <rect x="820" y="356" width="300" height="100" rx="10" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+  <text x="970" y="390" text-anchor="middle" font-size="14" font-weight="500" fill="var(--ink)">Synthesis &amp; wet-lab testing</text>
+  <text x="970" y="409" text-anchor="middle" font-size="11" fill="var(--muted)">MIC panel · CC50 · HC50 · CD · murine models</text>
+  <g fill="var(--pass)">
+    <circle cx="920" cy="434" r="3.4"/><circle cx="940" cy="434" r="3.4"/>
+    <circle cx="960" cy="434" r="3.4"/><circle cx="980" cy="434" r="3.4"/>
+  </g>
+
+  <line x1="970" y1="456" x2="970" y2="480" stroke="var(--pass)" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="790" y="482" width="360" height="44" rx="8" fill="var(--pass-soft)"/>
+  <text x="970" y="500" text-anchor="middle" font-size="11.5" fill="var(--pass)" font-weight="500">developability risk</text>
+  <text x="970" y="516" text-anchor="middle" font-size="10.5" fill="var(--pass)">already screened out — before the cost is spent</text>
+
+  <!-- citations -->
+  <text class="mono" x="560" y="560" font-size="10.5" fill="var(--muted)">aggregation — Ouyang &amp; Smith, Computational Pharmaceutics, ch. 7 §7.5.2</text>
+  <text class="mono" x="560" y="578" font-size="10.5" fill="var(--muted)">solubility — ibid. §7.5.3 · descriptor methodology — Leach, Molecular Modelling, ch. 12</text>
+
+  <!-- caption -->
+  <text x="40" y="620" font-size="12" fill="var(--muted)">OmegAMP's own reported pipeline selects candidates for predicted activity before synthesis; developability is checked only afterward, in the wet lab.</text>
+  <text x="40" y="638" font-size="12" fill="var(--muted)">PharmAMP inserts that check into the pipeline itself, as a free, seconds-fast pre-synthesis filter.</text>
+</svg>

@@ -24,6 +24,8 @@ solubility scoring, built as `seqme`-compatible metrics, plus a benchmark
 harness that runs AMP generators through both the existing potency/diversity
 metrics and these new developability ones side by side.
 
+![Pipeline diagram: generative AMP design filters candidates on predicted potency alone and only discovers aggregation or solubility failures after costly wet-lab synthesis; PharmAMP inserts a developability screen before that step.](docs/figures/potency_vs_developability.svg)
+
 ## What's here
 
 - `pharmamp/metrics/` — the framework. Two `seqme.core.base.Metric`
